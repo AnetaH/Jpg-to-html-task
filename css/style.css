@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.col-1 {width: 8.33%}
+.col-2 {width: 16.66%}
+.col-3 {width: 25%}
+.col-4 {width: 33.33%}
+.col-5 {width: 41.66%}
+.col-6 {width: 50%}
+.col-7 {width: 58.33%}
+.col-8 {width: 66.66%}
+.col-9 {width: 75%}
+.col-10 {width: 83.33%}
+.col-11 {width: 91.66%}
+.col-12 {width: 100%}
+
+.row:before, .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*="col-"] {
+    float: left;
+    min-height: 1px;
+}
+
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 25px;
+    text-transform: uppercase;
+}
+
+/*---HEADER---*/
+header {
+    min-height: 50px;
+    width: 100%;
+    color: #516065;
+}
+
+nav ul {
+    padding: 0;  
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border: 3px solid white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #516065;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    border: 3px solid #f0423b;
+    cursor: pointer;
+}
+
+nav ul li:hover a {
+    color: #f0423b;
+}
+
+nav ul li:active {
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.6);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.6);
+    box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.6); 
+}
+
+h2 {
+    display: inline-block;
+    font-weight: normal;
+}
+
+h2:after {
+    content: '';
+    width: 30%;
+    display: block;
+    background-color: #516065;
+    height: 3px;
+    margin: 10px 0;
+}
+
+h2:hover {
+  letter-spacing: 5px; 
+}
+ 
+h2:hover:after {
+    width: 100%;
+    transition: 1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+}
+
+/*---GALLERY SECTION---*/
+.gallery {
+    padding-left: calc((100vw - 1168px) / 2);
+}
+
+.gallery .row [class*="col-"] {
+    padding: 10px;
+    max-width: 290px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #516065;
+} 
+
+.gallery .row [class*="col-"]:hover {
+    border: 1px solid #f0423b;
+    -webkit-transform: scale(1.2) rotate(-3deg);
+    -ms-transform: scale(1.2) rotate(-3deg);
+    transform: scale(1.2) rotate(-3deg);
+    z-index: 1;
+    background-color: white;
+    transition: .3s;
+}
+
+.gallery .row > div {
+    position: relative;
+    padding: 0;
+}
+
+.gallery .layer {
+    background: rgba(255, 0, 0, 0.5);
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    opacity: 0;
+    transition: .3s;
+    z-index: 1;
+}
+
+.gallery .layer:hover {
+    opacity: 1;
+    cursor: crosshair;
+}
+
+.animatescroll {
+  font-size: 50px;
+  position: absolute;
+  width: 60px;
+  margin: 0 auto;
+  right: 50%;
+  left: 50%;
+  animation: jump 1.9s infinite; 
+}
+
+.animatescroll a {
+    color: #f0423b;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0); 
+}
+  50% {
+    transform: translateY(10px); 
+}
+  100% {
+    transform: translateY(0); } 
+}
+
+/*---CONTACT SECTION---*/
+.contact {
+    background-image: url('../images/background-contact.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    margin-top: 70px;
+}
+
+.contact h2::after {
+    background-color: #fff;
+}
+
+.contact .container .row {
+    padding-top: 30px;
+}
+
+.contact .row div:nth-child(2) {
+    padding: 20px 35px;
+}
+
+.contact .row div:nth-child(2) p {
+    text-transform: none;
+    padding-bottom: 25px;
+}
+
+.contact .row div:nth-child(2) h5 {
+    margin: 5px;
+}
+
+.contact input, .contact textarea {
+    margin: 20px 0;
+    background-color: transparent;
+    color: white;
+    width: 75%;
+    font-size: 15px;
+    line-height: 25px;
+    border: 1px solid #fff;
+}
+
+.contact textarea {
+    width: 100%;
+}
+
+form { 
+    display: flex; 
+    flex-flow: column;
+}
+
+form h4 {
+    margin-bottom: 0;
+}
+
+section input:focus, section textarea:focus {
+    border: 2px solid #f0423b;
+}
+
+.contact button {
+    background-color: #f0423b;
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 260px;
+    height: 50px;
+}
+
+/*---MEDIA QUERIES---*/
+@media (max-width: 1199px) and (min-width: 768px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;} 
+
+    .gallery .row [class*="col-"] {
+        max-width: none;
+        border: none;
+    }
+
+    .gallery .row [class*="col-"]:hover {
+        border: none;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 768px) {
+        .contact {
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+    }
+
+     .gallery .row [class*="col-"] {
+        max-width: none;
+        border: none;
+    }
+
+    .gallery .row [class*="col-"]:hover {
+        border: none;
+    }
+
+    nav ul {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    .contact {
+        height: auto;
+    }
+
+    .contact .container .row {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 0;
+    }
+
+    .contact textarea {
+    width: 100%;
+    }
+}

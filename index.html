@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Task - jpg to html</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<nav class="container">
+				<h2>Portfolio</h2>
+				<ul>
+					<li><a href="#">All</a></li>
+					<li><a href="#">Filtr nr 1</a></li>
+					<li><a href="#">Filtr nr 2</a></li>
+					<li><a href="#">Filtr nr 3</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="gallery container">
+			<div class="row">
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo1.jpg" alt="Photo 1">
+				</div>
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo2.jpg" alt="Photo 2">
+				</div>
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo3.jpg" alt="Photo 3">
+				</div>
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo4.jpg" alt="Photo 4">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo1.jpg" alt="Photo 1">
+				</div>
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo2.jpg" alt="Photo 2">
+				</div>
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo3.jpg" alt="Photo 3">
+				</div>
+				<div class="col-3 col-m-6">
+					<div class="layer">
+					</div>
+					<img src="images/photo4.jpg" alt="Photo 4">
+				</div>
+			</div>
+			<div class="animatescroll">
+				<a onclick="$('#contact').animatescroll();"href="#contact"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+			</div>
+		</section>
+		<section id="contact" class="contact">
+			<div class="container">
+				<h2>Kontakt</h2>
+				<div class="row">
+					<div class="col-6">
+						<form>
+							<label for="fname">Imię i nazwisko</label>
+							<input type="text" id="fname" placeholder="Aneta Halz" minlength="3" required></input>
+							<label for="email">Email</label>
+							<input type="email" id="email" placeholder="aneta.halz1@gmail.com" minlength="3" required></input>
+							<h4>Wiadomość</h4>
+							<textarea rows="10" cols="30"></textarea>
+							<button>Wyslij</button>
+						</form>
+					</div>
+					<div class="col-6">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut
+							commodo nisl. Cras tempus sodales accumsan. Vestibulum a metus
+							quis turpis dapibus pharetra. Class aptent taciti.
+						</p>
+						<h5>Jan Nowak</h5>
+						<h5>+48 111 222 333</h5>
+						<h5>jan@nowak.pl</h5>
+						<h5>www.nowak.pl</h5>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="./animatescroll/animatescroll.js"></script>
+	</body>
