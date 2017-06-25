@@ -12,53 +12,53 @@
 			<nav class="container">
 				<h2>Portfolio</h2>
 				<ul>
-					<li><a href="#">All</a></li>
-					<li><a href="#">Filtr nr 1</a></li>
-					<li><a href="#">Filtr nr 2</a></li>
-					<li><a href="#">Filtr nr 3</a></li>
+					<li><a href="#" id="all">All</a></li>
+					<li><a href="#" id="filtr1">Filtr nr 1</a></li>
+					<li><a href="#" id="filtr2">Filtr nr 2</a></li>
+					<li><a href="#" id="filtr3">Filtr nr 3</a></li>
 				</ul>
 			</nav>
 		</header>
 		<section class="gallery container">
 			<div class="row">
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo1">
 					<div class="layer">
 					</div>
-					<img src="images/photo1.jpg" alt="Photo 1">
+					<img id="img1" src="images/photo1.jpg" alt="Photo 1">
 				</div>
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo2">
 					<div class="layer">
 					</div>
-					<img src="images/photo2.jpg" alt="Photo 2">
+					<img id="img2" src="images/photo2.jpg" alt="Photo 2">
 				</div>
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo3">
 					<div class="layer">
 					</div>
-					<img src="images/photo3.jpg" alt="Photo 3">
+					<img id="img3" src="images/photo3.jpg" alt="Photo 3">
 				</div>
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo4">
 					<div class="layer">
 					</div>
-					<img src="images/photo4.jpg" alt="Photo 4">
+					<img id="img4" src="images/photo4.jpg" alt="Photo 4">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo1">
 					<div class="layer">
 					</div>
 					<img src="images/photo1.jpg" alt="Photo 1">
 				</div>
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo2">
 					<div class="layer">
 					</div>
 					<img src="images/photo2.jpg" alt="Photo 2">
 				</div>
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo3">
 					<div class="layer">
 					</div>
 					<img src="images/photo3.jpg" alt="Photo 3">
 				</div>
-				<div class="col-3 col-m-6">
+				<div class="col-3 col-m-6 photo4">
 					<div class="layer">
 					</div>
 					<img src="images/photo4.jpg" alt="Photo 4">
@@ -67,6 +67,11 @@
 			<div class="animatescroll">
 				<a onclick="$('#contact').animatescroll();" href="#contact"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 			</div>
+		</section>
+		<section id="theModal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
 		</section>
 		<section id="contact" class="contact">
 			<div class="container">
@@ -98,5 +103,6 @@
 			</div>
 		</section>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="./animatescroll/animatescroll.js"></script>
+		<script src="./animatescroll/animatescroll.js"></script>	
+		<script type="text/javascript" src="./js/scripts.js"></script>
 	</body>

@@ -54,18 +54,18 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    padding: 10px;
-    margin: 5px;
-    border: 3px solid white;
 }
 
 nav ul li a {
+    border: 3px solid white;
     text-decoration: none;
     color: #516065;
     font-weight: bold;
+    padding: 10px;
+    margin: 5px;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
     border: 3px solid #f0423b;
     cursor: pointer;
 }
@@ -74,7 +74,7 @@ nav ul li:hover a {
     color: #f0423b;
 }
 
-nav ul li:active {
+nav ul li a:active {
     -webkit-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.6);
     -moz-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.6);
     box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.6); 
@@ -108,6 +108,11 @@ h2:hover:after {
     padding-left: calc((100vw - 1168px) / 2);
 }
 
+.gallery .row {
+    display: flex;
+    justify-content: center;
+}
+
 .gallery .row [class*="col-"] {
     padding: 10px;
     max-width: 290px;
@@ -115,6 +120,22 @@ h2:hover:after {
     justify-content: center;
     border: 1px solid #516065;
 } 
+
+.gallery .row:first-child [class*="photo"] {
+    top: 1px;
+}    
+
+.gallery .row .photo1 {
+    right: -3px;
+}
+
+.gallery .row .photo2 {
+    right: -2px;
+}
+
+.gallery .row .photo3 {
+    right: -1px;
+}
 
 .gallery .row [class*="col-"]:hover {
     border: 1px solid #f0423b;
@@ -147,13 +168,13 @@ h2:hover:after {
 }
 
 .animatescroll {
-  font-size: 50px;
-  position: absolute;
-  width: 60px;
-  margin: 0 auto;
-  right: 50%;
-  left: 50%;
-  animation: jump 1.9s infinite; 
+    font-size: 50px;
+    position: absolute;
+    width: 60px;
+    margin: 0 auto;
+    right: 50%;
+    left: 50%;
+    animation: jump 1.9s infinite; 
 }
 
 .animatescroll a {
@@ -169,6 +190,73 @@ h2:hover:after {
 }
   100% {
     transform: translateY(0); } 
+}
+
+/*---MODAL SECTION---*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(81, 96, 101, 0.82); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #f0423b;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*---CONTACT SECTION---*/
@@ -255,6 +343,10 @@ section input:focus, section textarea:focus {
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;} 
 
+    .gallery .row {
+        display: inline;
+    }
+
     .gallery .row [class*="col-"] {
         max-width: none;
         border: none;
@@ -280,6 +372,10 @@ section input:focus, section textarea:focus {
         width: 100%;
     }
 
+    .gallery .row {
+        display: inline;
+    }
+
      .gallery .row [class*="col-"] {
         max-width: none;
         border: none;
@@ -296,6 +392,21 @@ section input:focus, section textarea:focus {
 
     nav ul li {
         display: block;
+        padding: 15px;
+    }
+
+    nav ul li a {
+        padding: 10px 50px;
+    }
+
+    .animatescroll {
+        margin-left: calc((100vw - 68px) / 2);
+        right: 0;
+        left: 0;
+    }
+
+    .modal-content {
+        width: 100%;
     }
 
     .contact {
@@ -309,6 +420,6 @@ section input:focus, section textarea:focus {
     }
 
     .contact textarea {
-    width: 100%;
+        width: 100%;
     }
 }
